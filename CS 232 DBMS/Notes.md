@@ -195,3 +195,292 @@ This is the ability to change one level of the architecture without affecting th
 *   Describe the different types of data models (object-based, record-based, physical).
 *   What are the main categories of DBMS languages (DDL, DML, DCL, TCL)? Give examples of commands in each category.
 *   What factors should you consider when choosing a DBMS for a specific application?
+
+
+## Week 03 - Database Schema, Development, DFDs, and ERDs - Enhanced Notes
+
+### 1. Database Schema vs. State:
+
+*   **Schema (Intension):** Think of the schema as the *blueprint* or *design* of your database. It defines the structure, including:
+    *   Tables: The containers for your data.
+    *   Columns: The attributes or properties of each table.
+    *   Data Types: The type of data that can be stored in each column (e.g., integer, text, date).
+    *   Constraints: Rules that enforce data integrity (e.g., primary keys, foreign keys).
+    *   Functions, Triggers, Stored Procedures: Reusable code blocks that perform specific tasks.
+
+    The schema is relatively *static* and changes infrequently. It's like the architectural plans for a building.
+*   **State/Instance (Extension):** The state (or instance) is the actual *data* stored in the database *at a particular moment in time*. It's the *content* of the database. Think of it as the occupancy of the building at a specific time: who is in which room, what furniture is there, etc. The state changes frequently as data is inserted, updated, and deleted.
+
+    *Analogy:* Think of a class roster. The schema is the *structure* of the roster: student name, ID, major, etc. The state is the *list of students* enrolled in the class at a specific point in the semester.
+
+### 2. Database Development Process:
+
+*   **Stages:**
+    *   Preliminary Study: Understand the problem and determine if a database is the right solution.
+    *   Requirements Analysis: Gather detailed information about the data to be stored and the operations to be performed on the data. What are the user needs?
+    *   Database Design: Create the schema (logical design) of the database. This includes defining tables, columns, relationships, and constraints.
+    *   Physical Design: Determine how the database will be physically stored (e.g., file structures, indexes).
+    *   Implementation: Build the database and load the data.
+    *   Maintenance: Monitor and maintain the database, including performance tuning, security updates, and backup/recovery.
+*   **Strategies:**
+    *   Top-Down: Start with a high-level understanding of the system and then break it down into smaller details. Start with general goals and refine into specific requirements. It's like planning a road trip by first deciding on the destination and then figuring out the route.
+    *   Bottom-Up: Start with specific requirements and then build up to a more general understanding of the system. Start with specific goals and then integrate them into a general structure. It's like building a house by starting with individual bricks and then assembling them into walls and rooms.
+
+### 3. Data Flow Diagrams (DFD):
+
+DFDs are used to model the flow of data through a system. They show how data moves between processes, data stores, and external entities.
+
+*   **Levels:**
+    *   Context Diagram (Level 0): Shows the entire system as a single process and its interactions with external entities. It provides a high-level overview.
+    *   Level 1 DFD: Decomposes the context diagram into more detailed processes and data flows.
+    *   Level 2+ DFD: Further decomposes the Level 1 DFD into even more detailed processes.
+
+    *Analogy:* Think of a factory. The Context Diagram shows the factory as a whole and its interactions with suppliers and customers. The Level 1 DFD shows the main departments within the factory (e.g., production, shipping, receiving). Level 2+ DFDs show the individual processes within each department.
+
+### 4. Entity Relationship Diagram (ERD):
+
+*   **Purpose:** ERDs are used to graphically represent the entities, attributes, and relationships in a database. They are a key tool for database design.
+
+    *Translates into relational tables:* An ERD is a blueprint for creating the tables in a relational database. Each entity becomes a table, attributes become columns, and relationships are implemented using foreign keys.
+
+*   **Components:**
+    *   Entities: Real-world objects that we want to store information about (e.g., Student, Course, Employee, Product). Represented as rectangles.
+    *   Attributes: Properties of entities (e.g., student's name, course's title, employee's salary, product's price). Represented as ovals.
+    *   Relationships: Associations between entities (e.g., "student enrolls in course," "employee works on project," "customer places order"). Represented as diamonds.
+*   **Types of Entities:**
+    *   Strong Entity: An entity that has a primary key (a unique identifier). For example, a Student entity with `roll_no` as the primary key.
+    *   Weak Entity: An entity that depends on another entity for its existence and doesn't have a primary key of its own. It uses a *partial key* combined with the primary key of the related entity to uniquely identify its instances. For example, a Dependent entity (e.g., a child of an employee) might depend on the Employee entity. The Dependent entity might have a partial key like `dependent_name`, which is unique *within* the context of a particular employee.
+*   **Attributes:**
+    *   Simple (Atomic): An attribute that cannot be further divided (e.g., `age`, `name`).
+    *   Composite: An attribute that is composed of multiple sub-attributes (e.g., `Address` consisting of `street`, `city`, `state`, `zip`).
+    *   Multi-Valued: An attribute that can have multiple values for a single entity instance (e.g., `phone_numbers` for a person). In a relational database, multi-valued attributes are typically handled by creating a separate table.
+    *   Derived: An attribute whose value can be calculated from other attributes (e.g., `age` can be derived from `date_of_birth`).
+    *   Key Attribute: An attribute that uniquely identifies each instance of an entity (e.g., `roll_no` for a student). This becomes the primary key of the corresponding table.
+*   **Case Study (University Registrar):**
+    *   Entities: Courses, Course Offerings, Students, Instructors.
+    *   Relationships: Enrollment (students enroll in course offerings), Grades (students receive grades in course offerings), Prerequisites (courses have prerequisites), Teaching Assignments (instructors are assigned to teach course offerings).
+
+### Exam-Style Questions:
+
+*   Explain the difference between a database schema and a database state. Give an example of each.
+*   Describe the different stages of the database development process.
+*   Compare and contrast the top-down and bottom-up strategies for database development.
+*   What is a Data Flow Diagram (DFD)? Explain the different levels of a DFD.
+*   What is an Entity Relationship Diagram (ERD)? Explain the purpose of an ERD and its main components (entities, attributes, relationships).
+*   Explain the difference between a strong entity and a weak entity. Give an example of each.
+*   Describe the different types of attributes (simple, composite, multi-valued, derived, key). Give an example of each.
+*   Design a simple ERD for a library database, including entities like Books, Authors, and Patrons, and relationships like "borrows" and "writes".
+
+
+## Week 04 - Relationships, Cardinalities, and Participation in ERDs - Enhanced Notes
+
+### 1. Relationships in ERD:
+
+*   **Degree of Relationships:** The degree of a relationship refers to the number of entities involved in the relationship.
+    *   **Unary (Recursive):** A relationship between instances of the *same* entity. Think of it as a relationship *within* a single table.
+        *   *Example:* `Employee supervises Employee`. This means one employee can supervise other employees. In a database, you'd have an `Employee` table with a `supervisor_id` column that references another employee's ID in the same table.
+    *   **Binary:** A relationship between *two different* entities. This is the most common type of relationship.
+        *   *Example:* `Student enrolls in Course`. This relates the `Student` entity to the `Course` entity.
+    *   **Ternary:** A relationship among *three different* entities.
+        *   *Example:* `Doctor prescribes Medicine to Patient`. This relates the `Doctor`, `Medicine`, and `Patient` entities.
+
+### 2. Mapping Cardinalities:
+
+Mapping cardinalities specify how many instances of one entity can be related to how many instances of another entity.
+
+*   **1:1 (One-to-One):** One instance of entity A is related to *one* instance of entity B, and vice versa.
+    *   *Example:* `One passport ↔ one person`. Each person has only one passport, and each passport belongs to only one person.
+*   **1:M (One-to-Many):** One instance of entity A can be related to *multiple* instances of entity B, but each instance of entity B is related to *only one* instance of entity A.
+    *   *Example:* `One customer ↔ multiple orders`. A customer can place many orders, but each order belongs to only one customer.
+*   **M:N (Many-to-Many):** One instance of entity A can be related to *multiple* instances of entity B, and vice versa.
+    *   *Example:* `Students enroll in multiple courses; courses have multiple students`. A student can enroll in many courses, and each course can have many students.
+        *   *Requires a bridge entity (e.g., Enrollment table):* Many-to-many relationships are typically implemented in relational databases using a *bridge table* (also called an *associative entity* or *junction table*). This table contains foreign keys referencing both entities involved in the relationship. In the `Students enroll in multiple courses` example, you would create an `Enrollment` table with foreign keys to the `Student` table and the `Course` table. The `Enrollment` table would store records of which students are enrolled in which courses.
+
+### 3. Participation Constraints:
+
+Participation constraints specify whether an entity *must* participate in a relationship.
+
+*   **Total Participation (Mandatory):** *All* instances of an entity *must* participate in the relationship. This is also known as *existence dependency*. In ER diagrams, total participation is often represented by a *double line*.
+    *   *Example:* `Every license must belong to an employee`. This means that there cannot be a license that is not associated with an employee.
+*   **Partial Participation (Optional):** *Not all* instances of an entity are required to participate in the relationship. In ER diagrams, partial participation is often represented by a *single line*.
+    *   *Example:* `Not all employees have a license`. This means that some employees may not have a license.
+
+### 4. Structural Constraints (min, max):
+
+These constraints define the *minimum* and *maximum* number of instances of one entity that can be related to an instance of another entity. This provides a more precise definition of the relationship.
+
+*   *Example:* `A professor teaches 1–4 classes, and each class is taught by exactly 1 professor`. This combines cardinality and participation constraints.
+
+### 5. Examples of Relationships:
+
+*   1:1: `Person ↔ Passport`
+*   1:M: `Department ↔ Employees` (One department can have many employees, but each employee belongs to only one department).
+*   M:N: `Books ↔ Authors` (One book can have multiple authors, and one author can write multiple books).
+
+### 6. Key Notations:
+
+*   **Chen Model:** Uses `1` and `M` symbols to represent cardinality.
+*   **Crow’s Foot:** A graphical notation that uses "crow's feet" to represent the "many" side of a relationship. It's a visual way to represent cardinality.
+
+### Exam-Style Questions:
+
+*   Explain the different degrees of relationships (unary, binary, ternary) in ER diagrams. Give an example of each.
+*   Describe the different types of mapping cardinalities (1:1, 1:M, M:N). Give an example of each.
+*   What is a bridge entity (associative entity)? Why is it needed for many-to-many relationships?
+*   Explain the difference between total participation and partial participation constraints. Give an example of each. How are they represented in ER diagrams?
+*   How do structural constraints (min, max) provide a more precise definition of relationships?
+*   Draw an ER diagram for a library database, including entities like Books, Authors, and Patrons, and relationships like "borrows" and "writes." Specify the cardinality and participation constraints for each relationship. Use Crow's Foot notation.
+*   Consider a database for a social media platform. Identify the entities and relationships, including cardinalities and participation constraints.
+
+
+## Week 05 - Mandatory/Optional Cardinality, ERD Example, and Keys - Enhanced Notes
+
+### 1. Mandatory vs. Optional Cardinality:
+
+This is a restatement of participation constraints, but the terms are slightly different.
+
+*   **Mandatory:** An entity *must* participate in the relationship. This is the same as *total participation*.
+    *   *Example:* `Employee must have a CNIC (Computerized National Identity Card)`. This implies a total participation constraint on the `Employee` entity in the relationship with the `CNIC`.
+*   **Optional:** An entity *may or may not* participate in the relationship. This is the same as *partial participation*.
+    *   *Example:* `Employee may own a Car`. This implies a partial participation constraint on the `Employee` entity in the relationship with the `Car` entity.
+
+*   **Crow's Foot Notation:** As mentioned before, this notation uses symbols to represent cardinality and participation constraints.
+    *   `Single line`: Represents optional participation (zero or one).
+    *   `Double line`: Represents mandatory participation (one or more, specifically at least one).
+    *   Other symbols are used to specify the "many" side of the relationship (the "crow's foot" itself).
+
+### 2. ERD Example (Company Database):
+
+*   **Entities:** `DEPARTMENT`, `PROJECT`, `EMPLOYEE`, `DEPENDENT`.
+*   **Relationships:**
+    *   `Departments control projects`. (Implies a 1:M relationship: One department can control multiple projects, but each project is controlled by only one department).
+    *   `Employees work on projects (tracking hours)`. (Implies an M:N relationship, requiring a bridge entity like `WorksOn` to track the hours each employee works on each project).
+    *   `Employees have dependents`. (Implies a 1:M relationship: One employee can have multiple dependents, but each dependent belongs to only one employee).
+    *   `Employees report to supervisors`. (Unary/Recursive relationship on the `Employee` entity, as one employee can be a supervisor for other employees).
+
+### 3. Steps to Create an ER Diagram:
+
+This is a good summary of the process:
+
+1.  Entity Identification: Identify the main objects or concepts that need to be represented in the database.
+2.  Relationship Identification: Determine how the entities are related to each other.
+3.  Cardinality Identification: Determine the cardinality constraints for each relationship (1:1, 1:M, M:N).
+4.  Attribute Identification: Determine the attributes (properties) of each entity.
+5.  Draw ERD: Create the graphical representation of the entities, relationships, and attributes using the appropriate notation (e.g., Chen model or Crow's Foot).
+
+### 4. Types of Keys:
+
+Keys are crucial for uniquely identifying records in a database table.
+
+*   **Super Key:** Any combination of attributes that *uniquely* identifies a record in a table. It can contain redundant attributes.
+    *   *Example:* `Student_ID + Student_Name`. If `Student_ID` is already unique, adding `Student_Name` makes it a super key but not a candidate key.
+*   **Candidate Key:** A *minimal* super key. It's a super key with *no redundant attributes*. A table can have multiple candidate keys.
+    *   *Example:* `Student_ID` or `Student_SSN` (if both are unique and minimal).
+*   **Primary Key:** The candidate key that is *chosen* to be the main identifier for the table. Each table has only *one* primary key.
+    *   *Example:* `Student_ID` (chosen as the primary key).
+*   **Alternate Key:** The candidate keys that are *not* chosen as the primary key.
+    *   *Example:* `Student_SSN` (if `Student_ID` is the primary key).
+*   **Surrogate Key:** An *artificial* key that is added to a table when there is no natural key (no existing attribute or combination of attributes that can uniquely identify a record). Surrogate keys are often auto-incrementing integers.
+    *   *Example:* An auto-incremented `ID` column in a table where no other attribute is guaranteed to be unique.
+
+### 5. Examples:
+
+*   **Company Database ERD:**
+    *   `DEPARTMENT` attributes: `Name`, `DNumber`, `Locations`, `ManagerID`, `ManagerStartDate`.
+    *   `EMPLOYEE` attributes: `CNIC (key)`, `Name`, `Address`, `Salary`, `WorksOn (multivalued)`. *Note:* `WorksOn` is a multi-valued attribute, which would typically be handled by creating a separate table (the bridge table for the M:N relationship between `EMPLOYEE` and `PROJECT`).
+    *   `Weak entity DEPENDENT linked to EMPLOYEE via EmpID`. This indicates that the `DEPENDENT` entity is existence-dependent on the `EMPLOYEE` entity, and it uses the `EmpID` (likely the primary key of `EMPLOYEE`) as a foreign key.
+
+### Exam-Style Questions:
+
+*   Explain the difference between mandatory and optional cardinality (participation constraints). Give examples of each.
+*   Describe the steps involved in creating an ER diagram.
+*   Explain the different types of keys (super key, candidate key, primary key, alternate key, surrogate key). Give an example of each.
+*   Consider the Company Database ERD example. Draw the ER diagram, including entities, attributes, relationships, cardinalities, and participation constraints (using Crow's Foot notation).
+*   Why is it necessary to create a bridge table for many-to-many relationships? How does the bridge table work?
+*   When would you use a surrogate key? Why?
+*   In the Company Database example, the `WorksOn` attribute of the `EMPLOYEE` entity is multivalued. How would you handle this in a relational database design?
+
+## Week 06 - Enhanced ERD (EER Model) - Enhanced Notes
+
+### 1. Enhanced ERD (EER Model): Concepts
+
+The EER model extends the basic ER model with more advanced concepts to represent complex data relationships.
+
+*   **Superclass/Subclass:** A hierarchical relationship where a *superclass* (also called a *parent class*) represents a general entity type, and *subclasses* (also called *child classes*) represent more specialized entity types.
+    *   *Example:* `Student (superclass) → Undergraduate, Graduate (subclasses)`. All students share common attributes, but undergraduate and graduate students have additional, specific attributes.
+*   **Inheritance:** Subclasses *inherit* all attributes and relationships from their superclasses. This promotes code reuse and data consistency.
+    *   *Example:* `GraduateStudent inherits StudentID, Name, DOB from Student`. A `GraduateStudent` automatically has all the attributes of a `Student`.
+*   **Specialization/Generalization:** These are two ways to view the superclass/subclass relationship:
+    *   **Specialization (Top-down):** Starting with a *general* entity type (superclass) and defining more *specific* entity types (subclasses).
+        *   *Example:* `Student → Undergraduate, Graduate`. You start with the general concept of a `Student` and then specialize it into `Undergraduate` and `Graduate` students.
+    *   **Generalization (Bottom-up):** Starting with *specific* entity types and generalizing them into a more *general* entity type (superclass).
+        *   *Example:* `Professor + Lecturer → FacultyMember`. You start with the specific concepts of `Professor` and `Lecturer` and then generalize them into the more general concept of a `FacultyMember`.
+*   **Union Types (Categories):** A union type (or category) represents a single superclass/subclass relationship with *more than one superclass*. It groups *unrelated* entities into a single entity.
+    *   *Example:* `Person can be a Student or Employee`. A `Person` can be *either* a `Student` *or* an `Employee`, but *not necessarily both*. This is different from a regular superclass/subclass relationship where a subclass *is a kind of* superclass.
+
+### 2. Constraints
+
+*   **Total vs. Partial Participation:** (As before)
+    *   **Total:** Every entity in the subclass *must* be related to an entity in the superclass.
+        *   *Example:* `Every GraduateStudent must have an Advisor`. Total participation of `GraduateStudent` in the "has advisor" relationship.
+    *   **Partial:** An entity in the subclass *may or may not* be related to an entity in the superclass.
+        *   *Example:* `Not all FacultyMembers are Professors`. Partial participation of `FacultyMember` in the "is a professor" relationship.
+*   **Disjoint vs. Overlapping:** These constraints apply to subclasses of a superclass.
+    *   **Disjoint:** An entity can belong to *only one* subclass.
+        *   *Example:* `Vehicle is either Car or Truck`. A vehicle cannot be both a car and a truck at the same time.
+    *   **Overlapping:** An entity can belong to *multiple* subclasses.
+        *   *Example:* `Employee can be Manager and Mentor`. An employee can be both a manager and a mentor.
+
+### 3. Case Study (University Database)
+
+*   **Entities:**
+    *   `Student (Superclass)`: `StudentID`, `Name`, `DOB`.
+    *   `Subclasses`:
+        *   `Undergraduate`: `Major`, `Minor`.
+        *   `Graduate`: `ThesisTitle`, `Advisor`.
+    *   `FacultyMember (Superclass)`: `FacultyID`, `Name`, `Department`.
+    *   `Subclasses`:
+        *   `Professor`: `ResearchSpecialization`.
+        *   `Lecturer`: `CoursesTaught`.
+
+### 4. Mapping ERD/EER to Relational Tables
+
+This section describes how to translate an ERD or EER diagram into a relational database schema (tables and columns).
+
+*   **Regular Entities:** Create a table for each regular entity. The attributes of the entity become the columns of the table. Choose a primary key.
+    *   *Example:* `EMPLOYEE(SSN, Name, ...)`
+*   **Weak Entities:** Create a table for the weak entity. Include the primary key of the owner entity as a foreign key in the weak entity's table.
+    *   *Example:* `DEPENDENT(EmpID, DependentName, ...)` where `EmpID` is a foreign key referencing the `EMPLOYEE` table.
+*   **1:1 Relationships:** Add the primary key of one entity as a foreign key in the table representing the entity with total participation. If participation is partial on both sides, you can choose either table.
+*   **1:N Relationships:** Add the primary key of the entity on the "one" side as a foreign key in the table representing the entity on the "many" side.
+    *   *Example:* `EMPLOYEE(DNO, ...)` where `DNO` is a foreign key referencing the `DEPARTMENT` table.
+*   **M:N Relationships:** Create a junction table (also called a bridge table or associative entity). The junction table contains the primary keys of both entities as foreign keys.
+    *   *Example:* `WORKS_ON(ESSN, PNO, Hours)` where `ESSN` is a foreign key referencing `EMPLOYEE` and `PNO` is a foreign key referencing `PROJECT`.
+*   **Multivalued Attributes:** Create a separate table for the multivalued attribute. The table contains the primary key of the original entity and a column for the multivalued attribute.
+    *   *Example:* `DEPT_LOCATIONS(DNUMBER, DLOCATION)` where `DNUMBER` is a foreign key referencing the `DEPARTMENT` table.
+
+### 5. Example: Ternary Relationship (SUPPLY)
+
+*   `SUPPLY(SNAME, PARTNO, PROJNAME)`. This table represents a ternary relationship between Supplier (SNAME), Part (PARTNO), and Project (PROJNAME). Each column would be a foreign key referencing the respective table.
+
+### 6. Summary of ER-to-Relational Mapping
+
+| ER Model             | Relational Model              |
+| -------------------- | ----------------------------- |
+| Entity Type          | Table                         |
+| 1:1/1:N Relationship | Foreign Key                   |
+| M:N Relationship     | Junction Table + Foreign Keys |
+| Multivalued Attribute | Separate Table                |
+
+### Exam-Style Questions:
+
+*   Explain the concepts of superclass and subclass in the EER model. Give an example.
+*   What is inheritance in the context of EER modeling?
+*   Explain the difference between specialization and generalization.
+*   What is a union type (category)? How does it differ from a regular superclass/subclass relationship?
+*   Explain the difference between disjoint and overlapping constraints on subclasses. Give examples.
+*   Consider the University Database case study. Draw the EER diagram, including entities, attributes, relationships, cardinalities, participation constraints, and disjoint/overlapping constraints.
+*   Describe the steps involved in mapping an ERD/EER diagram to a relational database schema.
+*   How do you map 1:1, 1:N, and M:N relationships to relational tables?
+*   How do you handle multivalued attributes when mapping an ERD/EER diagram to a relational database schema?
+*   Design a relational database schema for the University Database case study, based on your EER diagram. Specify the tables, columns, data types, primary keys, and foreign keys.
