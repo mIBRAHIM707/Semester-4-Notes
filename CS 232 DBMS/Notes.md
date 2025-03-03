@@ -92,13 +92,46 @@ If you transfer $100 from account A to account B:
 *   **Isolation:** If another transaction is trying to read the balance of account A while the transfer is in progress, it should see either the old balance or the new balance, but not an intermediate state.
 *   **Durability:** Once the transfer is complete, the changes are permanent, even if the system crashes.
 
-## Exam-Style Questions:
+## Week 1: Exam-Style Question Answers
 
-*   Explain the difference between data and information. Provide an example of each.
-*   What are the key drawbacks of using a file system to manage data compared to a DBMS?
-*   List and explain the ACID properties of a transaction. Why are these properties important?
-*   Describe the roles of different types of database users (end users, application developers, DBAs).
-*   Give an example of a real-world application of a DBMS and explain how it is used.
+1.  **Explain the difference between data and information. Provide an example of each.**
+
+    *   **Data:** Raw, unorganized facts or figures. It's like the individual pixels in an image or the letters in a word. Data has no inherent meaning until it is processed.
+        *   *Example:* The number `25`, the word `"apple"`, a digital image of a tree.
+    *   **Information:** Processed, organized, and structured data that provides context and meaning, enabling decision-making. It's the result of analyzing and interpreting data.
+        *   *Example:* `"The temperature is 25 degrees Celsius"`, `"The fruit is an apple"`, a weather forecast generated from weather data.
+
+2.  **What are the key drawbacks of using a file system to manage data compared to a DBMS?**
+
+    *   **Data Redundancy:** The same data can be stored in multiple files, wasting storage space and increasing the risk of inconsistency.
+    *   **Data Inconsistency:** If the same data is stored in multiple files and one copy is updated while others are not, the data becomes inconsistent.
+    *   **Data Isolation:** It's difficult to access related data that is spread across multiple files.
+    *   **Security Issues:** File systems typically have limited security features, making them vulnerable to unauthorized access.
+    *   **Atomicity Problems:** Transactions involving updates to multiple files may not be atomic, leading to data corruption if a failure occurs during the transaction.
+
+3.  **List and explain the ACID properties of a transaction. Why are these properties important?**
+
+    *   **Atomicity:** A transaction is treated as a single, indivisible unit of work. Either all changes within the transaction are applied, or none are.
+    *   **Consistency:** A transaction must maintain the integrity of the database. It must move the database from one valid state to another.
+    *   **Isolation:** Transactions are isolated from each other. Concurrent transactions should not interfere with each other's results.
+    *   **Durability:** Once a transaction is committed, the changes are permanent and will survive even system failures.
+
+    *Importance:* ACID properties ensure data reliability and integrity, especially in multi-user environments where concurrent transactions are common.
+
+4.  **Describe the roles of different types of database users (end users, application developers, DBAs).**
+
+    *   **End Users:** People who use the applications that interact with the database (e.g., bank tellers, customers using an e-commerce website). They typically don't interact directly with the DBMS.
+    *   **Application Developers:** Programmers who write the applications that access and manipulate the data in the database. They use SQL and other programming languages to build the user interface and business logic.
+    *   **Database Administrators (DBA):** Responsible for managing the database system, including security, performance tuning, backup/recovery, and user access control.
+    *   **Systems Programmers:** Programmers who design and implement the DBMS software itself.
+
+5.  **Give an example of a real-world application of a DBMS and explain how it is used.**
+
+    *   *Example:* **Banking System**
+        *   A DBMS is used to store and manage customer accounts, transactions, loans, and other financial data.
+        *   It ensures the security and integrity of financial data.
+        *   It provides fast and reliable access to account information for bank tellers and customers.
+        *   It supports complex transactions such as fund transfers and loan processing.
 
 
 ## Week 02 - DBMS Architectures and Data Models - Enhanced Notes
