@@ -1130,3 +1130,560 @@ The agenda outlines the key topics covered in the lecture:
 3.  *Strengths of Agile RE:* Adaptable to changing requirements, iterative development, delivers functional software quickly. *Weaknesses:* Requires close collaboration, difficult to maintain documentation consistency, not ideal for strict regulatory requirements.
 4.  A *hybrid approach* combines elements of both traditional and agile methods, such as using structured documentation upfront (traditional) and iterative development sprints (agile). It can be beneficial for large enterprises that need to balance compliance with the need for flexibility.
 5.  The banking company switched to Agile for its mobile banking app because regulatory changes required frequent updates, and the mobile app needed to evolve based on customer feedback. Lessons learned included that Agile is best for evolving environments, while Waterfall is useful for initial documentation, and a hybrid approach can balance both.
+
+## Software Requirement Engineering: Lecture 7 Breakdown
+
+**Introduction**
+
+This lecture focuses on the importance of documenting software requirements, the different types of documentation, and the characteristics of a good Software Requirements Specification (SRS). It also covers use case diagrams and user stories.
+
+**Slides 1-2: Week Agenda**
+
+The agenda outlines the key topics covered in the lecture:
+
+*   Introduction to Process Models
+*   Traditional vs. Agile Requirements Engineering
+*   Documenting Requirements
+*   Quality Measurement in Requirements Engineering
+*   Activity & Case Study
+
+**Slides 3-4: What is Documenting?**
+
+Documentation refers to the structured recording of information about a software project. It helps developers, testers, and stakeholders understand project requirements and functionality, and provides a reference for future modifications and maintenance.
+
+*Analogy:* Documentation is like a detailed instruction manual for a complex machine. It explains how the machine works, how to operate it, and how to troubleshoot problems.
+
+*Key Takeaway:* Documentation provides a structured record of project information for understanding, maintenance, and future modifications.
+
+**Slides 5-6: Software Documentation**
+
+Software Documentation: It is a written piece of text that is often accompanied by a software program. This makes the life of all the members associated with the project easier. It may contain anything from API documentation, build notes, or just help content.
+
+*Key Takeaway:* Software documentation supports all project members by providing essential information.
+
+**Slides 7-10: Types of Software Documentation**
+
+*   **Requirement Documentation:** Description of how the software shall perform and the appropriate environment setup.
+*   **Architectural Documentation:** Concerns the design, components of the system, their roles, and data flow.
+*   **Technical Documentation:** Contains technical aspects like APIs and algorithms, primarily for developers.
+*   **End-user Documentation:** Support resources for the end user, such as user manuals.
+
+*Analogy:* Imagine building a house. Requirement documentation is like the architectural blueprints, architectural documentation is like the structural engineering plans, technical documentation is like the electrician's wiring diagrams, and end-user documentation is like the homeowner's manual.
+
+*Key Takeaway:* Different types of documentation cater to different audiences and purposes.
+
+**Slide 11: Why is Documentation Important?**
+
+*   Ensures clarity and consistency in requirements.
+*   Reduces ambiguity and misinterpretation.
+*   Supports regulatory and compliance needs.
+*   Facilitates communication among stakeholders.
+*   Improves project traceability and management.
+
+*Key Takeaway:* Documentation is essential for clarity, compliance, communication, and project management.
+
+**Slide 12: Types of Requirement Documents**
+
+*   Software Requirements Specification (SRS)
+*   Use Case Diagrams & User Stories
+*   Functional & Non-Functional Requirements
+*   Traceability Matrix
+
+*Key Takeaway:* Various types of documents capture and manage requirements.
+
+**Slides 13-14: Software Requirements Specification (SRS)**
+
+A Software Requirements Specification (SRS) is a detailed document that describes the system functionality, constraints, and technical specifications. It serves as a contract between stakeholders and developers, ensuring that the final product meets business and user expectations. Typically follows industry standards like IEEE 830.
+
+*Analogy:* The SRS is like a legally binding contract between a client and a construction company, outlining exactly what will be built and how.
+
+*Key Takeaway:* The SRS is a comprehensive document that serves as a contract between stakeholders and developers.
+
+**Slide 15: Why is SRS Important?**
+
+*   Provides clear documentation of system requirements, reducing miscommunication.
+*   Serves as a reference for development, testing, and maintenance.
+*   Ensures compliance with regulatory and security standards.
+*   Facilitates project planning and risk management.
+
+*Key Takeaway:* The SRS is crucial for communication, compliance, and project management.
+
+**Slide 16: Characteristics of a Good SRS**
+
+*   Complete: Covers all aspects of the system.
+*   Consistent: No conflicting requirements.
+*   Unambiguous: Clearly defined, leaving no room for misinterpretation.
+*   Verifiable: Can be tested to ensure compliance.
+*   Feasible: Realistic within the constraints of budget, time, and technology.
+
+*Key Takeaway:* A good SRS is complete, consistent, unambiguous, verifiable, and feasible.
+
+**Slide 17: Pros & Cons of SRS**
+
+This slide is not included in the extracted text.
+
+*Key Takeaway:* N/A
+
+**Slides 18-20: Structure of an SRS Document (1/2)**
+
+*   Introduction: Purpose, scope, definitions.
+*   Overall Description: System environment, constraints, assumptions.
+*   Functional Requirements: Detailed system functionalities.
+
+*Key Takeaway:* The SRS has a well-defined structure to organize requirements.
+
+**Slides 21-22: Structure of an SRS Document (2/2)**
+
+*   Non-Functional Requirements: Performance, security, usability, and reliability constraints.
+*   External Interface Requirements: User, hardware, and communication interfaces.
+*   System Models: Diagrams, use cases, and data flow models.
+
+*Key Takeaway:* The SRS has a well-defined structure to organize requirements.
+
+**Slides 23-25: Real-Life Example: SRS for an Online Banking System (1)**
+
+Introduction:
+*   Purpose: To design an online banking system that allows secure financial transactions.
+*   Scope: Users can check balances, transfer funds, and manage accounts.
+*   Acronyms & Abbreviations: PCI-DSS, MFA.
+
+*Key Takeaway:* The introduction sets the context for the system.
+
+**Slides 26-27: SRS for an Online Banking System (2)**
+
+Overall Description:
+*   System Constraints: The system must comply with PCI-DSS security standards.
+*   Assumptions: Users will have stable internet connections.
+
+*Key Takeaway:* The overall description outlines constraints and assumptions.
+
+**Slides 28-29: SRS for an Online Banking System (3)**
+
+Functional Requirements:
+*   Users must log in using two-factor authentication (MFA).
+*   The system must allow fund transfers between accounts.
+*   Users can check account balances and download transaction history.
+*   Admins must be able to generate account statements.
+
+*Key Takeaway:* Functional requirements detail what the system should do.
+
+**Slides 30-31: SRS for an Online Banking System (4)**
+
+Non-Functional Requirements:
+*   Transactions should process within 2 seconds.
+*   The system must comply with PCI-DSS security standards.
+*   The UI should be accessible for users with disabilities.
+*   System uptime must be 99.9%.
+
+*Key Takeaway:* Non-functional requirements specify how the system should perform.
+
+**Slides 32-33: SRS for an Online Banking System (5)**
+
+External Interface Requirements:
+*   User Interfaces: Web-based dashboard and mobile app.
+*   Hardware Interfaces: The system should be compatible with fingerprint authentication on mobile devices.
+*   Communication Interfaces: Secure API integrations for third-party payment processing.
+
+*Key Takeaway:* External interface requirements define how the system interacts with other systems and users.
+
+**Slides 34-35: SRS for an Online Banking System (6)**
+
+System Models:
+*   Use Case Diagrams: Account login and verification, fund transfer authorization.
+*   Sequence Diagrams: User authentication flow, transaction approval process.
+
+*Key Takeaway:* System models provide visual representations of system behavior.
+
+**Slides 36-38: Use Case Diagrams & User Stories**
+
+2.1. Use Case Diagrams: A graphical representation of user interactions with a system, showing actors and their interactions with system functionalities.
+
+*Analogy:* A use case diagram is like a map of a theme park, showing the different attractions (use cases) and the types of visitors (actors) who can access them.
+
+*Key Takeaway:* Use case diagrams visualize user-system interactions.
+
+**Slide 39: Components of a Use Case Diagram**
+
+*   Actors: Represent users or external systems.
+*   Use Cases: Specific actions or functionalities.
+*   Relationships: Indicate how actors interact with use cases.
+*   System Boundary: Defines the limits of the system.
+
+*Key Takeaway:* Understanding these components is key to creating effective use case diagrams.
+
+**Slide 40: Use Case Diagram**
+
+This slide provides a visual example of a use case diagram.
+
+*Key Takeaway:* Use case diagrams provide a clear visual representation of system functionality.
+
+**Slides 41-43: 2.2. User Stories**
+
+A simple, informal way to capture system functionalities from the user's perspective. Commonly used in Agile development.
+
+*Analogy:* User stories are like short notes from a customer to a chef, requesting specific dishes with particular preferences.
+
+*Key Takeaway:* User stories capture requirements from the user's perspective.
+
+**Slide 44: Structure of a User Story**
+
+Format: "As a [user role], I want to [feature] so that [benefit]." Example: "As a customer, I want to reset my password so that I can regain account access."
+
+*Key Takeaway:* User stories follow a simple, structured format.
+
+**Practice Quiz Questions:**
+
+1.  What are the four main types of software documentation, and what is the purpose of each?
+2.  What is a Software Requirements Specification (SRS), and why is it important?
+3.  List and describe five characteristics of a good SRS.
+4.  Describe the main components of a use case diagram.
+5.  What is a user story, and what is its structure? Provide an example.
+
+**Solutions to Practice Quiz Questions:**
+
+1.  *Requirement Documentation:* Describes how the software shall perform and the appropriate environment setup. *Architectural Documentation:* Concerns the design, components of the system, their roles, and data flow. *Technical Documentation:* Contains technical aspects like APIs and algorithms, primarily for developers. *End-user Documentation:* Support resources for the end user, such as user manuals.
+2.  An SRS is a detailed document that describes the system's functionality, constraints, and technical specifications. It is important because it serves as a contract between stakeholders and developers, ensuring that the final product meets business and user expectations.
+3.  Five characteristics of a good SRS:
+    *   *Complete:* Covers all aspects of the system.
+    *   *Consistent:* No conflicting requirements.
+    *   *Unambiguous:* Clearly defined, leaving no room for misinterpretation.
+    *   *Verifiable:* Can be tested to ensure compliance.
+    *   *Feasible:* Realistic within the constraints of budget, time, and technology.
+4.  The main components of a use case diagram are:
+    *   *Actors:* Represent users or external systems.
+    *   *Use Cases:* Specific actions or functionalities.
+    *   *Relationships:* Indicate how actors interact with use cases.
+    *   *System Boundary:* Defines the limits of the system.
+5.  A user story is a simple, informal way to capture system functionalities from the user's perspective. Its structure is: "As a [user role], I want to [feature] so that [benefit]." Example: "As a user, I want to search for products so that I can find what I need quickly."
+
+## Software Requirement Engineering: Lecture 8 Breakdown
+
+**Introduction**
+
+This lecture builds on the previous one by diving deeper into user stories, functional and non-functional requirements, and traceability matrices. It also provides guidelines for writing effective requirements.
+
+**Slides 1-2: Week Agenda**
+
+The agenda outlines the key topics covered in the lecture:
+
+*   Introduction to Process Models
+*   Traditional vs. Agile Requirements Engineering
+*   Documenting Requirements
+*   Quality Measurement in Requirements Engineering
+*   Activity & Case Study
+
+**Slides 3-4: 2.2. User Stories**
+
+A simple, informal way to capture system functionalities from the user's perspective. Commonly used in Agile development to describe features concisely.
+
+*Analogy:* User stories are like short, customer-focused descriptions of what a software system should do, written from the perspective of the end-user.
+
+*Key Takeaway:* User stories are a key tool in Agile for capturing user needs.
+
+**Slide 5: Structure of a User Story**
+
+Format: "As a [user role], I want to [feature] so that [benefit]." Example: "As a customer, I want to reset my password so that I can regain account access."
+
+*Key Takeaway:* User stories follow a simple, structured format.
+
+**Slide 6: Characteristics of Good User Stories (INVEST Model)**
+
+*   Independent: Should be self-contained and not dependent on others.
+*   Negotiable: Can be refined based on team discussions.
+*   Valuable: Provides value to the user.
+*   Estimable: Can be estimated in terms of effort required.
+*   Small: Should be completed within one development iteration.
+*   Testable: Can be validated through acceptance criteria.
+
+*Key Takeaway:* The INVEST model provides a checklist for creating effective user stories.
+
+**Slides 7-8: Example of User Story for an Online Banking System (1/2)**
+
+Title: Fund Transfer Between Accounts
+Description: "As a user, I want to transfer money between my accounts so that I can manage my finances efficiently."
+Acceptance Criteria:
+*   User can select source and destination accounts.
+*   User can enter the transfer amount.
+*   System verifies available balance before proceeding.
+*   Transaction confirmation message is displayed.
+
+*Key Takeaway:* This example illustrates a well-written user story with clear acceptance criteria.
+
+**Slide 9: Example of User Story for an Online Banking System (2/2)**
+
+Use Case Diagrams: Graphical representation of user interactions with the system.
+User Stories: Simple descriptions of a feature from an end-user perspective, used in Agile projects.
+
+*Key Takeaway:* This slide highlights the difference between user stories and use case diagrams.
+
+**Slides 10-11: Functional & Non-Functional Requirements (1/2)**
+
+*   Functional Requirements: “Define what the system must do”
+    *   Example: "The system shall allow users to log in using a username & password."
+*   Non-Functional Requirements: “Define system quality attributes such as performance, security, and usability”
+    *   Example: "The system must handle 1000 concurrent users with <2s response time."
+
+*Key Takeaway:* This slide reinforces the key differences between functional and non-functional requirements.
+
+**Slide 12: Functional & Non-Functional Requirements (2/2)**
+
+Real-Life Example:
+Online Shopping Website:
+Functional requirements include product search, checkout, and order tracking, while Non-functional requirements cover security, speed, and reliability.
+
+*Key Takeaway:* This example illustrates functional and non-functional requirements in a real-world context.
+
+**Slides 13-14: Viewpoints of Requirement Documentations (1/3)**
+
+SRS (Software Requirements Specification) is a comprehensive document that includes various elements like Functional & Non-Functional Requirements, Use Cases, and System Models.
+
+*Key Takeaway:* The SRS can be structured in different ways, depending on the project methodology.
+
+**Slides 15-16: Viewpoints of Requirement Documentations (2/3)**
+
+Types of Requirement Documents can be viewed in two ways:
+*   Independent Documents: Agile projects may maintain Use Cases, User Stories, Functional & Non-Functional Requirements, and Traceability Matrices as separate lightweight documents.
+*   Structured SRS Approach: Traditional or regulated environments may combine all these elements within the SRS as different sections.
+
+*Key Takeaway:* Documentation approach depends on the project's methodology and regulatory environment.
+
+**Slides 17-18: Viewpoints of Requirement Documentations (3/3)**
+
+SRS is a high-level document that integrates multiple requirement elements.
+
+*Key Takeaway:* The SRS can integrate multiple requirement elements and provide a comprehensive view.
+
+**Slides 19-21: Regression Testing (1/3)**
+
+Regression testing is a software testing technique that ensures that a program works as expected after changes to the code.
+
+*Analogy:* Regression testing is like re-running all the tests on a car after making a repair, to ensure that the repair didn't create any new problems.
+
+*Key Takeaway:* Regression testing is crucial for maintaining software quality after changes.
+
+**Slides 22-24: Regression Testing (2/3)**
+
+Every QA team needs to understand a client’s requirements and ensure to launch a defect-free application into the market.
+
+*Key Takeaway:* The QA team needs to understand requirements and draft the test plan covering all the functionalities/requirements.
+
+**Slides 25-27: Regression Testing (3/3)**
+
+A simple & easy solution is to map the requirement with related test scenarios and respective test cases. This map can be called a ‘Requirement Traceability Matrix (RTM)’.
+
+*Key Takeaway:* A Requirement Traceability Matrix (RTM) is used to ensure that all possible scenarios/cases are covered in the test plan.
+
+**Slides 28-30: Traceability Matrix (1/3)**
+
+A Requirement Traceability Matrix (RTM), also known as Traceability Matrix, is a document that maps and tracks the relationship between requirements, design, implementation, and testing.
+
+*Analogy:* The RTM is like a roadmap that connects every requirement to its corresponding design elements, code implementation, and test cases, ensuring that nothing is missed.
+
+*Key Takeaway:* The RTM ensures that every requirement is properly implemented and validated.
+
+**Slides 31-33: Traceability Matrix (2/3)**
+
+RTM maps all the requirements with the test cases. By using RTM (document), one can verify test cases cover all functionality of the application as per the requirements of the customer.
+
+*Key Takeaway:* RTM helps verify test cases cover all functionality of the application as per the requirements of the customer.
+
+**Slides 34-36: Traceability Matrix (3/3)**
+
+The main purpose of the requirement traceability matrix is to verify that all requirements of clients are covered in the test cases designed by the testers.
+
+*Key Takeaway:* RTM helps verify that all requirements of clients are covered in the test cases designed by the testers.
+
+**Slide 37: Why is a Traceability Matrix Important?**
+
+*   Helps in requirement verification by ensuring all requirements are covered.
+*   Assists in impact analysis when making changes to the system.
+*   Useful for audits and compliance tracking (e.g., HIPAA, GDPR, ISO standards).
+*   Reduces risk by preventing missing or untested requirements.
+
+*Key Takeaway:* An RTM is crucial for verification, impact analysis, compliance, and risk reduction.
+
+**Slide 38: Parameters of RTM**
+
+*   Requirement ID: The requirement ID is assigned to every requirement of the project.
+*   Requirement description: For every requirement, a detailed description is given in the SRS (System/Software Requirement Specification) document.
+*   Requirement Type: Understand the type of requirements, i.e., banking, telecom, healthcare, traveling, e-commerce, education, etc.
+*   Test cases ID: The testing team designs test cases. Test cases are also assigned with some ID.
+
+*Key Takeaway:* An RTM has parameters for better understanding of the requirements.
+
+**Slide 39: Types of Traceability Matrices**
+
+*   Forward Traceability – Ensures that all requirements are implemented in the final product.
+*   Backward Traceability – Ensures that all design and development work is based on original requirements.
+*   Bidirectional Traceability – Links requirements to test cases, ensuring full coverage both ways.
+
+*Key Takeaway:* Different types of traceability matrices serve different purposes.
+
+**Slide 40: Forward Traceability**
+
+In the forward traceability matrix, requirements are mapped with the test cases.
+
+*Key Takeaway:* Forward traceability ensures that all requirements are covered in test cases.
+
+**Slide 41: Backward Traceability**
+
+In the backward traceability matrix, test cases are mapped with the requirements.
+
+*Key Takeaway:* Backward traceability ensures that no extra test case is added which is not required as per our requirements.
+
+**Slide 42: Bidirectional Traceability**
+
+A bi-directional traceability matrix is a combination of a forward traceability matrix and a backward traceability matrix.
+
+*Key Takeaway:* Bidirectional traceability ensures full coverage both ways.
+
+**Slide 43: Structure of a Traceability Matrix**
+
+This slide shows how to design the structure of a traceability matrix.
+
+*Key Takeaway:* A clear structure to the traceability matrix will be helpful for understanding and managing the requirements.
+
+**Slide 44: Example-1: Traceability Matrix for an Online Banking System**
+
+This slide shows an example of a traceability matrix for online banking system.
+
+*Key Takeaway:* Understanding through example is a good way to comprehend the traceability matrix.
+
+**Slides 45-46: Example-2: Traceability Matrix in a Healthcare System**
+
+Provides an audit trail for external regulatory inspections. Outcome: The traceability matrix helps verify that each HIPAA requirement is properly implemented and tested before deployment.
+
+*Key Takeaway:* This example illustrates the importance of traceability matrices in regulated industries.
+
+**Slide 47: Benefits of Using a Traceability Matrix**
+
+This slide summarizes the benefits of using a traceability matrix.
+
+*Key Takeaway:* RTM helps verify that all requirements of clients are covered in the test cases designed by the testers.
+
+**Slides 48-49: Challenges & Best Practices**
+
+Challenge: Keeping the matrix updated in fast-paced projects. Solution: Automate traceability tracking using requirement management tools (e.g., JIRA, IBM DOORS).
+
+*Key Takeaway:* Managing and maintaining a traceability matrix can be challenging, but automation can help.
+
+**Slide 50: Final One (RTM)**
+
+The Traceability Matrix is a critical tool in software development for requirement validation and compliance.
+
+*Key Takeaway:* The Traceability Matrix is a critical tool in software development for requirement validation and compliance.
+
+**Slide 51: Guidelines for Writing Effective Requirements**
+
+This slide is an introduction to the guidelines for writing effective requirements.
+
+*Key Takeaway:* Guidelines for writing effective requirements are crucial for ensuring clarity, accuracy, and completeness.
+
+**Slide 52: Understand Your Stakeholders**
+
+One of the key tips to writing great requirements is understanding your stakeholders.
+
+*Key Takeaway:* Identifying and involving all relevant stakeholders from the beginning, you can ensure that their needs and expectations are captured in the requirements.
+
+**Slide 53: Understand What Is Needed**
+
+There is a huge difference between want and need.
+
+*Key Takeaway:* Rather than focusing on possible solutions, simply list what the system needs – the solution can come later.
+
+**Slide 54: Remember the CONOPs**
+
+The Concept of Operations (CONOPS) is a valuable artifact.
+
+*Key Takeaway:* The CONOPS will help you write quality requirements by finding all the assumptions.
+
+**Slide 55: Be Specific, But Not Too Specific**
+
+Writing specific requirements is crucial to avoid ambiguity and misinterpretation.
+
+*Key Takeaway:* Finding the right balance between specificity and flexibility is key to writing effective requirements.
+
+**Slide 56: Give Requirements, Not Instructions**
+
+Understand what is needed and create requirements from those needs.
+
+*Key Takeaway:* If you understand your stakeholders' needs, writing requirements rather than instructions becomes an easier task.
+
+**Slide 57: Include a Number, Name, and Description**
+
+Each requirement should be uniquely identified with a number and name for easy reference and tracking.
+
+*Key Takeaway:* A clear and concise description of the requirement is essential to ensure that all stakeholders have a common understanding of what is being requested.
+
+**Slide 58: Ensure Traceability**
+
+Traceability is vital in requirements management to establish relationships between requirements, design, implementation, and testing.
+
+*Key Takeaway:* By tracing requirements throughout the project lifecycle, you can ensure that each requirement is satisfied and verified, leading to a successful project outcome.
+
+**Slide 59: Include a Rationale**
+
+A rationale (reason) justifies the inclusion of a specific requirement.
+
+*Key Takeaway:* The rationale provides reviewers and implementers with additional information on the intent of the requirements and avoids confusion down the line.
+
+**Slide 60: Use Proper Grammar**
+
+Maintaining proper grammar in requirement documentation is crucial for clarity and consistency.
+
+*Key Takeaway:* Using proper grammar will prevent costly mistakes due to confusion.
+
+**Slide 61: Use a Standard**
+
+Use a standard to ensure consistency while writing your requirements, choosing one that is right for your industry.
+
+*Key Takeaway:* Using a standard to ensure consistency while writing your requirements, choosing one that is right for your industry.
+
+**Slide 62: Example: Applying the Tips in Practice**
+
+This slide shows an example of good requirement writing.
+
+*Key Takeaway:* Understanding through example is a good way to comprehend how to write good requirements.
+
+**Slide 63: Week Agenda**
+
+The agenda outlines the key topics covered in the lecture:
+
+*   Introduction to Process Models
+*   Traditional vs. Agile Requirements Engineering
+*   Documenting Requirements
+*   Quality Measurement in Requirements Engineering
+*   Activity & Case Study
+
+**Slide 64: Quality Measurement in Requirements Engineering**
+
+This slide starts the discussion of quality measurement in requirements engineering.
+
+*Key Takeaway:* Quality Measurement in Requirements Engineering is important for a successful project.
+
+**Practice Quiz Questions:**
+
+1.  Describe the INVEST model for user stories and explain why each characteristic is important.
+2.  What is a Requirement Traceability Matrix (RTM), and why is it used in software development?
+3.  Explain the difference between forward traceability and backward traceability.
+4.  List and describe five guidelines for writing effective requirements.
+5.  Why is it important to understand your stakeholders when writing requirements?
+
+**Solutions to Practice Quiz Questions:**
+
+1.  The INVEST model for user stories includes:
+    *   *Independent:* The user story should be self-contained and not rely on other stories. This makes it easier to prioritize and implement.
+    *   *Negotiable:* The user story is not a contract but a starting point for discussion and refinement.
+    *   *Valuable:* The user story should provide value to the end-user or customer.
+    *   *Estimable:* The development team should be able to estimate the effort required to implement the user story.
+    *   *Small:* The user story should be small enough to be completed within a single iteration or sprint.
+    *   *Testable:* The user story should have clear acceptance criteria that can be used to verify its implementation.
+2.  A Requirement Traceability Matrix (RTM) is a document that maps and tracks the relationship between requirements, design, implementation, and testing. It is used to ensure that every requirement is properly implemented and validated.
+3.  *Forward traceability* ensures that all requirements are implemented in the final product by mapping requirements to test cases. *Backward traceability* ensures that all design and development work is based on original requirements by mapping test cases back to requirements.
+4.  Five guidelines for writing effective requirements:
+    *   *Understand Your Stakeholders:* Capture their needs and expectations.
+    *   *Understand What Is Needed:* Focus on needs, not solutions.
+    *   *Be Specific, But Not Too Specific:* Balance clarity with flexibility.
+    *   *Give Requirements, Not Instructions:* Provide enough information for cost-effective solutions.
+    *   *Ensure Traceability:* Establish relationships between requirements and other project elements.
+5.  Understanding your stakeholders is important because it ensures that their needs and expectations are captured in the requirements. This leads to more comprehensive and accurate requirements, resulting in a product that meets their needs.
