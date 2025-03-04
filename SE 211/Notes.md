@@ -1,6 +1,6 @@
-# Software Requirement Engineering: Lecture 1 Breakdown
+# Software Requirement Engineering Notes
 
-## Week 1
+## Software Requirement Engineering: Lecture 1 Breakdown
 
 **Introduction**
 
@@ -164,40 +164,3 @@ This slide is a summary of why requirements are important.
 3.  List and describe three risks associated with poor requirements engineering.
 4.  Outline the four phases of the requirements engineering process.
 5.  Why is it important to have well-defined requirements in a software project? Provide at least three reasons.
-
-**Answers to Practice Quiz Questions:**
-
-1.  **Define Software Requirements Engineering (SRE).**
-
-    Software Requirements Engineering (SRE) is the process of figuring out, writing down, and keeping track of what people want a software system to do. It's a systematic way to understand what the software should do, how it should act, and what limits it has to work within.
-
-2.  **Explain the role of stakeholders in the requirements engineering process.**
-
-    Stakeholders are anyone who cares about the software – customers, users, managers, developers, etc. Their role is super important because they're the ones who tell us what they need the software to do. We have to talk to them, understand their needs, and make sure the software meets those needs. If we don't involve them enough, we might build the wrong thing!
-
-3.  **List and describe three risks associated with poor requirements engineering.**
-
-    Okay, three risks of bad requirements engineering are:
-
-    *   **Insufficient User Involvement:** If we don't talk to the users enough, we might build something they don't like or can't use. For example, an e-commerce site that's hard to navigate because the developers didn't ask users what they wanted.
-
-    *   **Ambiguous Requirements:** If the requirements are not clear, the developers might misunderstand them and build the wrong thing. For example, if a requirement says "the system should be fast," but doesn't define what "fast" means, developers might have different ideas about how fast it should be.
-
-    *   **Creeping User Requirements:** This is when people keep adding new features after the project has already started. This can make the project take longer, cost more, and be harder to finish.
-
-4.  **Outline the four phases of the requirements engineering process.**
-
-    The four phases are:
-
-    *   **Elicitation:** This is where we gather requirements from stakeholders by interviewing them, doing surveys, or holding workshops.
-    *   **Analysis:** This is where we try to understand the requirements, sort them into categories, and figure out how they relate to each other.
-    *   **Specification:** This is where we write down the requirements in a clear and organized way, using documents and diagrams.
-    *   **Validation:** This is where we ask the stakeholders to check if the requirements are correct, complete, and what they actually want.
-
-5.  **Why is it important to have well-defined requirements in a software project? Provide at least three reasons.**
-
-    It's important to have good requirements because:
-
-    *   **It helps us build the right thing:** If we know exactly what the customer wants, we're more likely to build software that meets their needs.
-    *   **It saves time and money:** If we have clear requirements, we're less likely to make mistakes that we have to fix later, which can save a lot of time and money.
-    *   **It improves communication:** Good requirements provide a common language for everyone involved in the project, which helps avoid misunderstandings and makes it easier to work together.
