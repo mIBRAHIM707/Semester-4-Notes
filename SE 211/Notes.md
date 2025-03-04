@@ -1687,3 +1687,449 @@ This slide starts the discussion of quality measurement in requirements engineer
     *   *Give Requirements, Not Instructions:* Provide enough information for cost-effective solutions.
     *   *Ensure Traceability:* Establish relationships between requirements and other project elements.
 5.  Understanding your stakeholders is important because it ensures that their needs and expectations are captured in the requirements. This leads to more comprehensive and accurate requirements, resulting in a product that meets their needs.
+
+## Software Requirement Engineering: Lecture 9 Breakdown
+
+**Introduction**
+
+This lecture focuses on quality measurement in requirements engineering, emphasizing key characteristics of high-quality requirements and the benefits they bring. It also covers compliance and industry standards and introduces a checklist approach for measuring quality.
+
+**Slides 1-2: Title and Week Agenda**
+
+This lecture is all about how to make sure your requirements are good quality.
+
+*   Introduction to Process Models
+*   Traditional vs. Agile Requirements Engineering
+*   Documenting Requirements
+*   Quality Measurement in Requirements Engineering
+*   Activity & Case Study
+
+**Slides 3-4: Quality Measurement in Requirements Engineering**
+
+This slide introduces the key aspects of measuring the quality of requirements:
+
+*   Completeness – Covers all necessary functionalities.
+*   Consistency – No contradictions or conflicts.
+*   Clarity – Free from ambiguity.
+*   Feasibility – Can be implemented with available resources.
+*   Testability – Can be verified through validation.
+*   Traceability – Can be followed up.
+
+*Analogy:* Think of these qualities as the key ingredients for a successful recipe. If any of these ingredients are missing or of poor quality, the final dish (software system) will suffer.
+
+*Key Takeaway:* These six characteristics are essential for ensuring high-quality requirements.
+
+**Slide 5: Completeness & Consistency**
+
+This slide expands on completeness and consistency.
+
+*   **Completeness:** All system aspects are covered (functional, non-functional, constraints).
+    *   *Example:* A banking system must specify login, fund transfer, and transaction history features.
+*   **Consistency:** No contradictions between requirements.
+    *   *Example:* A system cannot have both "1-minute response time" and "real-time processing."
+
+*Key Takeaway:* Complete requirements cover all necessary aspects, and consistent requirements avoid contradictions.
+
+**Slide 6: Clarity & Feasibility**
+
+This slide expands on clarity and feasibility.
+
+*   **Clarity:** No vague terms like "user-friendly" or "fast."
+    *   *Example:* "The system should load quickly." → "The system must load within 2 seconds."
+*   **Feasibility:** Can be implemented given time, budget, and technology.
+    *   *Example:* Requiring a mobile app to function without an internet connection may be infeasible.
+
+*Key Takeaway:* Clear requirements are specific and unambiguous, and feasible requirements are realistic and achievable.
+
+**Slide 7: Testability & Traceability**
+
+This slide expands on testability and traceability.
+
+*   **Testability:** Each requirement must be verifiable through test cases.
+    *   *Example:* "The system must support 500 concurrent users" can be tested via load testing.
+*   **Traceability:** Links requirements to design, implementation, and testing.
+    *   *Example:* A Traceability Matrix tracks whether all functional requirements are tested.
+
+*Key Takeaway:* Testable requirements can be validated through testing, and traceable requirements can be linked throughout the development lifecycle.
+
+**Slide 8: Quality Measurement in Requirements Engineering**
+
+Recall Covered in Lect 03 Week 02: Characteristics of Good Requirements.
+
+*Key Takeaway:* This reminds us that the lecture builds on previous material.
+
+**Slide 9: Characteristics of Good Requirements**
+
+This slide lists the characteristics of good requirements.
+
+Clear and Unambiguous
+
+Complete
+
+Consistent
+
+Feasible
+
+Testable (Verifiable)
+
+Prioritized
+
+Traceable
+
+Modifiable
+
+Measurable
+
+*Key Takeaway:* These are the main characteristics of good requirements.
+
+**Slides 10-18: Characteristics of Good Requirements**
+
+These slides go into detail of each of the good requirement characteristics and gives examples.
+
+*Key Takeaway:* Knowing these characteristics in detail will help to write good requirements.
+
+**Slides 19-29: High-quality requirements- Benefits**
+
+High-quality requirements have many benefits.
+
+Reduced Ambiguity
+
+Improved Communication
+
+Accurate Cost Estimations
+
+Enhanced Scope Management
+
+Higher Quality Deliverables
+
+Faster Development Cycles
+
+Improved Testing
+
+Easier Change Management
+
+Enhanced Risk Management
+
+Customer Satisfaction
+
+Regulatory Compliance
+
+Knowledge Preservation
+
+*Analogy:* Think of high-quality requirements as the foundation of a building. A strong foundation leads to a stable and long-lasting structure.
+
+*Key Takeaway:* High-quality requirements lead to numerous benefits across the entire software development lifecycle.
+
+**Slides 30-32: Compliance & Industry Standards**
+
+*   IEEE 830 – Software Requirements Specification (SRS)
+*   ISO 25010 – Software Quality Measurement Framework
+*   GDPR, HIPAA – Regulatory Compliance for Data Security
+    *   *Example:* Healthcare software must comply with HIPAA security rules.
+
+*Key Takeaway:* Compliance with industry standards is crucial for ensuring quality and meeting legal requirements.
+
+**Slides 33-34: Measuring Quality – Checklist Approach**
+
+Checklist for High-Quality Requirements:
+☑️ Are all critical functionalities documented?
+☑️ Do requirements avoid contradictions?
+☑️ Can each requirement be verified?
+☑️ Are constraints and risks identified?
+
+*Key Takeaway:* A checklist approach can help ensure that requirements meet quality standards.
+
+**Practice Quiz Questions:**
+
+1.  List and describe six key characteristics of high-quality requirements.
+2.  Explain why clarity is important in requirements engineering and provide an example of how to improve clarity.
+3.  How does traceability contribute to quality in requirements engineering?
+4.  Name three industry standards or regulations that are relevant to quality measurement in requirements engineering.
+5.  Describe a checklist approach for measuring the quality of requirements.
+
+**Solutions to Practice Quiz Questions:**
+
+1.  Six key characteristics of high-quality requirements:
+    *   *Completeness:* Covers all necessary functionalities.
+    *   *Consistency:* No contradictions or conflicts.
+    *   *Clarity:* Free from ambiguity.
+    *   *Feasibility:* Can be implemented with available resources.
+    *   *Testability:* Can be verified through validation.
+    *   *Traceability:* Can be followed up.
+2.  Clarity is important because it reduces ambiguity and misinterpretation, leading to a shared understanding among stakeholders. To improve clarity, replace vague terms with specific, measurable criteria. For example, change "The system should be fast" to "The system must respond to user inputs within 2 seconds under normal conditions."
+3.  Traceability contributes to quality by linking requirements to design, implementation, and testing. This ensures that all requirements are addressed, changes are managed effectively, and the system meets its intended goals.
+4.  Three industry standards or regulations relevant to quality measurement in requirements engineering:
+    *   *IEEE 830:* Software Requirements Specification (SRS) standard.
+    *   *ISO 25010:* Software Quality Measurement Framework.
+    *   *GDPR/HIPAA:* Regulatory compliance for data security.
+5.  A checklist approach for measuring the quality of requirements involves using a checklist to verify that requirements meet certain criteria. For example:
+    *   Are all critical functionalities documented?
+    *   Do requirements avoid contradictions?
+    *   Can each requirement be verified?
+    *   Are constraints and risks identified?
+
+## Software Requirement Engineering: Lecture 10 Breakdown
+
+**Introduction**
+
+This lecture focuses on processes and process models in requirements engineering, highlighting the steps involved, the actors and stakeholders, and strategies for process improvement.
+
+**Slides 1-2: Week Agenda**
+
+The agenda outlines the key topics covered in the lecture:
+
+*   Processes & Process Models in Requirement Engineering
+*   Requirement Engineering Process & Steps
+*   Actors & Stakeholders in Requirement Engineering
+*   Process Improvement for Requirement Engineering
+
+**Slides 3-4: Processes & Process Models**
+
+A process is a structured set of activities performed to achieve a specific goal. A process model is a structured framework or methodology that defines how processes should be carried out.
+
+*Analogy:* Think of a process as the steps you take to bake a cake, and the process model as the recipe that guides you through those steps.
+
+*Key Takeaway:* A process model provides a structured framework for carrying out processes.
+
+**Slide 5: Processes & Process Models**
+
+Example:
+Software Development Life Cycle (SDLC) is a process model.
+The activities within SDLC, like Requirements Engineering, Design, Implementation, Testing, Deployment, and Maintenance, are processes.
+
+*Key Takeaway:* The SDLC is a process model that encompasses various processes.
+
+**Slide 6: Requirement Engineering (RE) Process vs. RE Process Model**
+
+Requirement Engineering Process consists of activities like elicitation, analysis, specification, validation, and management.
+Requirement Engineering Process Model defines how these activities should be structured and followed systematically.
+
+*Key Takeaway:* The RE process involves specific activities, while the RE process model defines how these activities are structured.
+
+**Slide 7: Requirement Engineering Process (Example)**
+
+Activities in Requirement Engineering:
+
+*   Requirements Elicitation – Gathering requirements from stakeholders.
+*   Requirements Analysis – Identifying inconsistencies, prioritizing needs.
+*   Requirements Specification – Documenting requirements formally.
+*   Requirements Validation – Ensuring correctness and completeness.
+*   Requirements Management – Handling changes and updates to requirements.
+
+*Key Takeaway:* These are the core activities involved in the requirements engineering process.
+
+**Slide 8: Requirement Engineering Process Model (Example)**
+
+*   **Waterfall Model in RE:** Elicitation → Analysis → Specification → Validation → Management (Linear approach).
+*   **Agile Model in RE:** Iterative cycles of requirements gathering, refinement, and validation.
+
+*Key Takeaway:* Different process models structure the RE activities in different ways.
+
+**Slide 9: Analogy to Understand the Difference**
+
+Process Model: Like a recipe (guideline on how to cook a dish).
+Process: The actual steps you take to cook that dish.
+
+*Key Takeaway:* This analogy reinforces the difference between a process and a process model.
+
+**Slide 10: Processes & Process Models in Requirement Engineering**
+
+SDLC Models focus on overall software development, where Requirement Engineering (RE) Process Models specifically address how requirements are gathered, analyzed, documented, and managed throughout the project.
+
+*Key Takeaway:* RE Process Models are specific to requirements engineering and differ from overall SDLC models.
+
+**Slide 11: Week Agenda**
+
+The agenda outlines the key topics covered in the lecture:
+
+*   Processes & Process Models in Requirement Engineering
+*   Requirement Engineering Process & Steps
+*   Actors & Stakeholders in Requirement Engineering
+*   Process Improvement for Requirement Engineering
+
+**Slide 12: Requirement Engineering Process & Steps**
+
+Phases of Requirement Engineering:
+Requirement engineering ensures that software meets user needs.
+
+*   Elicitation
+*   Analysis
+*   Specification
+*   Validation
+
+*Key Takeaway:* These phases are crucial for successful software development.
+
+**Slide 13: Requirements Elicitation**
+
+*   **Definition:** Gathering requirements from stakeholders.
+*   **Activities:**
+    *   Identifying stakeholders.
+    *   Conducting interviews, surveys, and workshops.
+    *   Observing existing systems.
+*   **Objective:** Understand user needs and expectations.
+
+*Key Takeaway:* Elicitation is about understanding what the stakeholders need.
+
+**Slide 14: Requirements Analysis**
+
+*   **Definition:** Processing gathered requirements.
+*   **Activities:**
+    *   Categorizing functional & non-functional requirements.
+    *   Identifying constraints & dependencies.
+    *   Resolving conflicting requirements.
+*   **Objective:** Ensure clarity, feasibility, and completeness.
+
+*Key Takeaway:* Analysis is about making sure the requirements are clear, feasible, and complete.
+
+**Slide 15: Requirements Specification**
+
+*   **Definition:** Documenting structured requirements.
+*   **Activities:**
+    *   Writing Software Requirements Specification (SRS).
+    *   Using diagrams (Use Cases, Data Flow Diagrams).
+    *   Maintaining traceability.
+*   **Objective:** Provide clear, structured documentation.
+
+*Key Takeaway:* Specification is about documenting the requirements in a structured way.
+
+**Slide 16: Requirements Validation**
+
+*   **Definition:** Ensuring correctness and completeness.
+*   **Activities:**
+    *   Stakeholder review and feedback.
+    *   Prototyping and walkthroughs.
+    *   Consistency and completeness checks.
+*   **Objective:** Confirm requirements align with user expectations.
+
+*Key Takeaway:* Validation is about confirming that the requirements meet user expectations.
+
+**Slide 17: Week Agenda**
+
+The agenda outlines the key topics covered in the lecture:
+
+*   Processes & Process Models in Requirement Engineering
+*   Requirement Engineering Process & Steps
+*   Actors & Stakeholders in Requirement Engineering
+*   Process Improvement for Requirement Engineering
+
+**Slide 18: What is an Actor in Software Development?**
+
+An actor is any entity (human or system) that interacts with the software system.
+Actors are essential for use case modeling as they define system interactions.
+
+*Analogy:* Actors are like the characters in a play who interact with the stage (the software system).
+
+*Key Takeaway:* Actors define how users or systems interact with the software.
+
+**Slide 19: Types of Actors**
+
+*   **Primary Actor:** Directly interacts with the system (e.g., User, Customer).
+*   **Secondary Actor:** Supports system operations indirectly (e.g., Payment Gateway, API).
+*   **System Actor (or External Actor):** External system that interacts with the software (e.g., Database, Third-party service).
+
+*Key Takeaway:* Different types of actors have different roles in the system.
+
+**Slide 20: Example of Actors in an Online Banking System**
+
+*   **Customer (Primary Actor):** Logs in, checks balance, transfers funds.
+*   **Bank Teller (Primary Actor):** Accesses customer accounts to assist with transactions.
+*   **Banking System (Secondary Actor):** Processes transactions, updates balance.
+*   **Regulatory Authority (External Actor):** Ensures compliance with financial regulations.
+
+*Key Takeaway:* This example illustrates the different types of actors in a real-world system.
+
+**Slide 21: What is a Stakeholder in Software Development?**
+
+A stakeholder is any individual or entity that has an interest in the system and can affect or be affected by it.
+Unlike actors, stakeholders may or may not interact directly with the system.
+
+*Analogy:* Stakeholders are like the audience members who are affected by the play, even though they are not on the stage.
+
+*Key Takeaway:* Stakeholders have an interest in the system, whether or not they interact with it directly.
+
+**Slide 22: Key Stakeholders & Their Roles**
+
+(Note: Detailed content not provided in the original file.)
+
+*Key Takeaway:* N/A
+
+**Slide 23: How Actors Affect System Design & Development?**
+
+Actors influence:
+
+*   **Functional Requirements:** What the system should do (e.g., Users requesting a “Forgot Password” feature).
+*   **Non-Functional Requirements:** How the system should behave (e.g., Regulatory Authorities enforcing data security rules).
+*   **System Architecture:** How different actors interact determines system complexity (e.g., APIs interacting with an e-commerce platform).
+
+*Key Takeaway:* Actors influence various aspects of system design and development.
+
+**Slide 24: Difference Between Actors & Stakeholders**
+
+(Note: Table or detailed comparison not provided in the original file.)
+
+*Key Takeaway:* N/A
+
+**Slide 25: Week Agenda**
+
+The agenda outlines the key topics covered in the lecture:
+
+*   Processes & Process Models in Requirement Engineering
+*   Requirement Engineering Process & Steps
+*   Actors & Stakeholders in Requirement Engineering
+*   Process Improvement for Requirement Engineering
+
+**Slide 26: Process Improvement for Requirement Engineering**
+
+Common Issues in Requirement Engineering:
+
+*   Ambiguous or unclear requirements.
+*   Changing requirements due to market shifts.
+*   Lack of stakeholder communication.
+
+*Key Takeaway:* These are common challenges in requirements engineering.
+
+**Slide 27: Strategies for Process Improvement**
+
+*   Implement Requirement Traceability Matrix (RTM).
+*   Adopt Capability Maturity Model Integration (CMMI) for continuous improvement.
+*   Use Agile & Iterative Approaches for flexibility.
+*   Conduct Regular Reviews & Stakeholder Feedback.
+*   Automate requirement tracking using tools like JIRA, IBM Rational DOORS.
+
+*Key Takeaway:* These strategies can help improve the requirements engineering process.
+
+**Slide 28: Key Takeaways**
+
+*   Requirement Engineering ensures software meets user needs.
+*   Various process models impact how requirements are handled.
+*   Involving stakeholders is critical for success.
+*   Continuous process improvement enhances requirement clarity and quality.
+*   Tools and methodologies help streamline requirement management.
+
+*Key Takeaway:* This slide summarizes the key takeaways from the lecture.
+
+**Practice Quiz Questions:**
+
+1.  What is the difference between a process and a process model in requirements engineering? Give an example of each.
+2.  List and describe the four key phases of the requirements engineering process.
+3.  What is an actor in software development, and how does it differ from a stakeholder?
+4.  Give an example of a primary actor, a secondary actor, and an external actor in a library management system.
+5.  Describe three strategies for process improvement in requirements engineering.
+
+**Solutions to Practice Quiz Questions:**
+
+1.  A *process* is a structured set of activities performed to achieve a specific goal, such as gathering requirements from stakeholders. A *process model* is a structured framework that defines how these activities should be carried out, such as the Waterfall model or the Agile model.
+2.  The four key phases of the requirements engineering process are:
+    *   *Elicitation:* Gathering requirements from stakeholders.
+    *   *Analysis:* Processing gathered requirements to ensure clarity and completeness.
+    *   *Specification:* Documenting structured requirements in an SRS.
+    *   *Validation:* Ensuring correctness and completeness through stakeholder review.
+3.  An *actor* is any entity (human or system) that interacts directly with the software system. A *stakeholder* is any individual or entity that has an interest in the system and can affect or be affected by it, whether or not they interact directly with the system.
+4.  In a library management system:
+    *   *Primary Actor:* Librarian (directly interacts with the system to manage books and users).
+    *   *Secondary Actor:* Payment Gateway (supports system operations by processing payments for overdue fines).
+    *   *External Actor:* Database (external system that stores and provides data to the library management system).
+5.  Three strategies for process improvement in requirements engineering:
+    *   *Implement Requirement Traceability Matrix (RTM):* To ensure all requirements are covered in testing.
+    *   *Use Agile & Iterative Approaches:* For flexibility and continuous feedback.
+    *   *Conduct Regular Reviews & Stakeholder Feedback:* To identify and address issues early.
