@@ -1,4 +1,4 @@
-# HM 211 Islamiyat Enhanced Notes
+# HM 211 PakStudies Enhanced Notes
 
 ## Slide 1: Breakdown and Explanation
 
@@ -191,7 +191,7 @@ This section provides a detailed breakdown of the factors that often contribute 
 
     *   **Answer Focus:** It represented different schools of thought within the Muslim community and highlighted the internal discussions and disagreements about the best path forward for Muslims in India.
 
-# HM 211 Islamiyat Enhanced Notes
+# HM 211 PakStudies Enhanced Notes
 
 ## Slide 4: Breakdown and Explanation
 
@@ -335,7 +335,7 @@ This section provides a direct comparison, which is essential for understanding 
         *   **Aligarh:** It fostered a sense of Muslim identity and political consciousness, indirectly contributing to the two-nation theory and the demand for Pakistan.
         *   **Deoband:** It mobilized Muslims against British rule, contributing to the broader independence movement. However, its opposition to the two-nation theory meant it did not support the creation of Pakistan.
 
-# HM 211 Islamiyat Enhanced Notes
+# HM 211 PakStudies Enhanced Notes
 
 ## Slide 5: Breakdown and Explanation
 
@@ -458,7 +458,7 @@ The slide is structured to explain the formation and objectives of both the Cong
 
     *   **Answer Focus:** It was based on the assertion that Muslims were a distinct community with separate interests that could not be adequately represented in a unified Indian political system.
 
-# HM 211 Islamiyat Enhanced Notes
+# HM 211 PakStudies Enhanced Notes
 
 ## Slides 6 & 7: Breakdown and Explanation
 
