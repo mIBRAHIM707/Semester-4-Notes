@@ -191,7 +191,7 @@ This section provides a detailed breakdown of the factors that often contribute 
 
     *   **Answer Focus:** It represented different schools of thought within the Muslim community and highlighted the internal discussions and disagreements about the best path forward for Muslims in India.
 
-**Slide 3: Breakdown and Explanation**
+## Slide 3: Breakdown and Explanation
 
 The slide is structured to present a narrative of events and their significance:
 
@@ -870,7 +870,7 @@ Let's break down each one:
 
     *   **Answer Focus:** Congress initially opposed and boycotted, later participating to disrupt. Muslim League did not fully reject, also initially boycotted due to Congress agreement, but had a more favorable initial response.
 
-**Slide 9: Breakdown and Explanation**
+## Slide 9: Breakdown and Explanation
 
 The slide is structured to cover these key topics:
 
